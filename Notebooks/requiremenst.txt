@@ -19,3 +19,4 @@ requests
 joblib
 pyarrow
 python-dotenv
+evidently

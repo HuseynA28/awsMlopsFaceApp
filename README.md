@@ -1,1 +1,1 @@
-# awsMlopsFaceApp
+# MlOPS_IN_AWS

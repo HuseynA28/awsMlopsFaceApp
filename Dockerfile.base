@@ -1,0 +1,26 @@
+# Use the official Python image
+FROM python:3.11-slim-buster
+
+# Set the working directory
+WORKDIR /coder/huseyn/work
+
+# Copy the requirements file
+COPY requirements.txt /coder/huseyn/work
+
+# Notify about the requirements file copy
+RUN echo "Requirements file copied successfully."
+
+# Create and configure the Python virtual environment
+RUN python -m venv venv && \
+    echo "Virtual environment created successfully."
+
+# Activate the virtual environment and install dependencies
+ENV PATH="/coder/huseyn/work/venv/bin:$PATH"
+RUN pip install --no-cache-dir -r requirements.txt && \
+    echo "Dependencies installed successfully."
+
+# Expose ports for MLflow and Jupyter Lab
+EXPOSE 5000 8888
+
+# Include a final echo to confirm the image was built successfully
+RUN echo "Docker image built successfully."

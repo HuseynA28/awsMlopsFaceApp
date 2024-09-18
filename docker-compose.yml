@@ -1,0 +1,139 @@
+version: '3.8'
+services:
+  mysql:
+    restart: always
+    image: mysql
+    container_name: mlflow_db
+    ports:
+      - "3306:3306"
+    env_file:
+      - .env
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - mysql_data:/var/lib/mysql 
+      - ./sql_scripts:/docker-entrypoint-initdb.d
+    networks:
+      custom-network:
+        ipv4_address: 172.20.0.2
+
+  mlflow:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile.base
+    container_name: mlflow_server
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    environment:
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}
+      MLFLOW_S3_ENDPOINT_URL: ${MLFLOW_S3_ENDPOINT_URL}
+      S3_MLFLOW_BUCKET: ${S3_MLFLOW_BUCKET}
+    command: >
+      mlflow server --backend-store-uri mysql+pymysql://${MYSQL_USER}:${MYSQL_PASSWORD}@mlflow_db:3306/${MYSQL_DATABASE} --artifacts-destination s3://${S3_MLFLOW_BUCKET}/ --serve-artifacts --host 0.0.0.0
+    depends_on:
+      - mysql
+    volumes:
+      - mlflow-data:/mlflow
+    networks:
+      custom-network:
+        ipv4_address: 172.20.0.3
+  jenkins:
+    restart: always
+    build:
+      context: ./jenkins
+    image: jenkins_server
+    container_name: jenkins
+    ports:
+      - "8090:8080"
+      - "50000:50000"
+    networks:
+      custom-network:
+        ipv4_address: 172.20.0.4
+    env_file:
+      - .env
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+
+
+  db:
+    image: postgres
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5433:5432"
+    networks:
+      custom-network:
+        ipv4_address: 172.20.0.5
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      custom-network:
+        ipv4_address: 172.20.0.6
+
+  grafana:
+    image: grafana/grafana-enterprise
+    container_name: grafana
+    user: "472"
+    ports:
+      - "3000:3000"
+    volumes:
+    - ./config/grafana_datasources.yaml:/etc/grafana/provisioning/datasources/datasource.yaml:ro
+    - ./config/grafana_dashboards.yaml:/etc/grafana/provisioning/dashboards/dashboards.yaml:ro
+    - ./dashboards:/opt/grafana/dashboards
+    networks:
+      custom-network:
+        ipv4_address: 172.20.0.7
+
+  vscode:
+    build:
+      context: ./vscode
+    container_name: vscode
+    restart: always
+    ports:
+      - "8081:8080"
+    depends_on:
+      - mlflow
+    volumes:
+      - ./notebooks:/coder/huseyn/work
+      - jupyter-data:/jupyter
+    environment:
+      PASSWORD: "password"
+    command: >
+      code-server --bind-addr 0.0.0.0:8080 --auth password
+    networks:
+      custom-network:
+        ipv4_address: 172.20.0.8
+
+networks:
+  custom-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+volumes:
+  mysql_data:
+  postgres_data:
+  mlflow-data:
+  jupyter-data:
+  jenkins_home:
+  dbdata:

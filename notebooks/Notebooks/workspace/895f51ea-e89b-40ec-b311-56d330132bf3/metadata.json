@@ -1,0 +1,15 @@
+{
+  "id": "895f51ea-e89b-40ec-b311-56d330132bf3",
+  "name": "Face recognition Data Quality Project",
+  "description": "My project descriotion",
+  "dashboard": {
+    "name": "Face recognition Data Quality Project",
+    "panels": [],
+    "tabs": [],
+    "tab_id_to_panel_ids": {}
+  },
+  "team_id": null,
+  "date_from": null,
+  "date_to": null,
+  "created_at": "2024-09-16T21:31:45.360047"
+}

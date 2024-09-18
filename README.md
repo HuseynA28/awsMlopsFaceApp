@@ -59,7 +59,7 @@ The pipeline is designed to automate the end-to-end machine learning workflow, f
 ## Quick Links
 
 - [GitHub Repository] (https://github.com/HuseynA28/awsMlopsFaceApp)
-- [Live Demo] ([https://statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html](https://facerecognitionmachinelearning-production-f097.up.railway.app/))
+- [Live Demo] (https://facerecognitionmachinelearning-production-f097.up.railway.app/)
 
 ## QR Code for Access
 

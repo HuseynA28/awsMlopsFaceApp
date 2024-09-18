@@ -208,7 +208,6 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 📧 Contact
 For any questions or feedback, feel free to reach out:
 
-Email: 
 LinkedIn: Your LinkedIn Profile
 🔗 [Back to Top](https://www.linkedin.com/in/huseyn-abdullayev-566a74123/)
 

@@ -65,16 +65,68 @@ The pipeline is designed to automate the end-to-end machine learning workflow, f
 
 You can quickly access the deployed application by scanning the QR code below:
 
-![QR Code](path-to-qr-code-image)
+![adobe-express-qr-code](https://github.com/user-attachments/assets/51ad7913-5fff-4275-b7be-95c2576bf56d)
+
 
 ## How to Run Locally
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-repository-link.git
+   git clone https://github.com:HuseynA28/awsMlopsFaceApp.git
+
+Set Up Environment Variables
+
+ 
+## Create a .env file in the root directory and add your  credentials.
 
 
 
-![Animation (0)](https://github.com/user-attachments/assets/245b1467-e8a4-4bd1-b4db-83fe0d9f742e)
+### .env File
 
+```bash
+# Environment Variables for Docker and Services
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=
+
+MYSQL_USER=mlflowuser
+MYSQL_PASSWORD=mlflowpassword
+MYSQL_DATABASE=mlflowdb
+MYSQL_ROOT_PASSWORD=rootpassword
+
+PGADMIN_DEFAULT_EMAIL=admin@example.com
+PGADMIN_DEFAULT_PASSWORD=adminpassword
+
+MLFLOW_S3_ENDPOINT_URL=
+S3_MLFLOW_BUCKET=
+
+POSTGRES_PASSWORD=postgrespassword
+```
+```bash
+# Environment Variables for Notebooks
+
+aws_access_key_id=
+aws_secret_access_key=
+
+SNOWFLAKE_ACCOUNT=
+SNOWFLAKE_USER=
+SNOWFLAKE_PASSWORD=
+SNOWFLAKE_SCHEMA=
+SNOWFLAKE_DATABASE=
+SNOWFLAKE_ROLE=
+SNOWFLAKE_WAREHOUSE=
+
+POSTGRES_PASSWORD=postgrespassword
+```
+### Explanation:
+- **Docker and Services Section**: This includes environment variables for AWS, MySQL, and other services used in your Docker containers.
+- **Notebooks Section**: These environment variables are specifically for accessing Snowflake and other related resources in the notebooks.
+
+This structure makes it easy to manage environment variables across different tools in a single `.env` file.
+
+
+
+
+![Animation 1](https://github.com/user-attachments/assets/536173fc-9dd8-4dd4-8b56-3479d2f6df17)

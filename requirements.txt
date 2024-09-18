@@ -6,12 +6,37 @@ numpy
 scikit-learn
 pymysql
 cryptography
-#prefect
+prefect
 tqdm
 requests
 joblib
 pyarrow
 python-dotenv
+click
+colorama
+cycler
+Flask
+fonttools
+itsdangerous
+Jinja2
+joblib
+kiwisolver
+MarkupSafe
+matplotlib
+numpy
+opencv-python-headless
+packaging
+Pillow
+pyparsing
+python-dateutil
+pytz
+scipy
+seaborn
+six
+threadpoolctl
+unicorn
+Werkzeug
+gunicorn
 
 
 

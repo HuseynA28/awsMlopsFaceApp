@@ -1,7 +1,10 @@
 
 # 🧠 ML Model Pipeline Deployment
 
-![Pipeline Overview](https://github.com/user-attachments/assets/536173fc-9dd8-4dd4-8b56-3479d2f6df17)
+![Pipeline Overview](https://github.com/user-attachments/assets/ca81f29e-c147-4164-9ec1-7ea62071b62c)
+
+
+
 
 This repository showcases a comprehensive **Machine Learning (ML) pipeline deployment** leveraging cloud-native and DevOps tools. The architecture integrates **AWS**, **Docker**, **MLflow**, **Jenkins**, **Grafana**, **Snowflake**, and more to deliver an end-to-end ML workflow.
 
@@ -36,6 +39,7 @@ The pipeline automates the entire ML lifecycle, from data ingestion to model dep
 | **Jenkins**           | Automates CI/CD processes: <br>• Runs tests <br>• Builds Docker containers <br>• Orchestrates model deployment                                                             |
 | **Docker**            | Ensures consistent environments across development, testing, and production stages.                                                                                          |
 | **Grafana**           | Monitors pipeline health and visualizes metrics like model performance, build status, and system health.                                                                    |
+| **Evidently**         | Provides tools for monitoring model performance and diagnosing issues in machine learning systems, with features for data drift, model quality, and target drift analysis. |
 | **Railway APP**       | Deploys the final ML model and application, accessible via QR code or [live demo](https://facerecognitionmachinelearning-production-f097.up.railway.app/)                |
 
 ---

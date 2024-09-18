@@ -34,7 +34,7 @@ The pipeline is designed to automate the end-to-end machine learning workflow, f
 7. **Grafana**: This tool is used for monitoring the pipeline, visualizing important metrics like model performance, build status, and system health.
    - Integrated with Jenkins and MLflow for real-time monitoring.
 
-8. **Railway APP**: The final model and application are deployed via Railway APP. The application can be accessed using the provided QR code or the [live demo link](https://facecognitionmachinelearning-production-ff6f.up.railway.app).
+8. **Railway APP**: The final model and application are deployed via Railway APP. The application can be accessed using the provided QR code or the [live demo link] (https://statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html)
 
 ### How it Works
 
@@ -58,8 +58,8 @@ The pipeline is designed to automate the end-to-end machine learning workflow, f
 
 ## Quick Links
 
-- [GitHub Repository](https://github.com/your-repository-link)
-- [Live Demo](https://facecognitionmachinelearning-production-ff6f.up.railway.app)
+- [GitHub Repository] (https://github.com/HuseynA28/awsMlopsFaceApp)
+- [Live Demo] (https://statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html)
 
 ## QR Code for Access
 

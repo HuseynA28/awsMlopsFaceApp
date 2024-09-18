@@ -134,7 +134,7 @@ docker-compose up --build
 Jenkins: http://localhost:8080
 MLflow: http://localhost:5000
 Grafana: http://localhost:3000
-VScode : http://localhost: 8080
+VScode : http://localhost: 8081
 Postgres : http://localhost: 5433
 Adminer : http://localhost: 8080
 ```

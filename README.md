@@ -11,9 +11,10 @@ This repository showcases a comprehensive **Machine Learning (ML) pipeline deplo
 ## 🚀 Quick Links
 
 - [🔗 GitHub Repository](https://github.com/HuseynA28/awsMlopsFaceApp)
-- [📺 Live Demo](https://facerecognitionmachinelearning-production-f097.up.railway.app/)
+- [📺 Live Demo](https://web-production-1665.up.railway.app/)
 
-![Live Demo QR Code](https://github.com/user-attachments/assets/51ad7913-5fff-4275-b7be-95c2576bf56d)
+![Live Demo QR Code](https://github.com/user-attachments/assets/ba16986b-251f-43ee-85dd-3dbea2b9e194)
+
 
 *Scan the QR code above to access the deployed application instantly.*
 

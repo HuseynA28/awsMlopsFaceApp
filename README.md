@@ -1,7 +1,10 @@
 
 # 🧠 ML Model Pipeline Deployment
 
-![Pipeline Overview](https://github.com/user-attachments/assets/ca81f29e-c147-4164-9ec1-7ea62071b62c)
+<img src="https://github.com/user-attachments/assets/ba16986b-251f-43ee-85dd-3dbea2b9e194" width="100" height="100" alt="Live Demo QR Code">
+
+*Scan the QR code above to access the deployed application instantly.*
+
 
 
 
@@ -13,7 +16,7 @@ This repository showcases a comprehensive **Machine Learning (ML) pipeline deplo
 - [🔗 GitHub Repository](https://github.com/HuseynA28/awsMlopsFaceApp)
 - [📺 Live Demo](https://web-production-1665.up.railway.app/)
 
-![Live Demo QR Code](https://github.com/user-attachments/assets/ba16986b-251f-43ee-85dd-3dbea2b9e194)
+[Live Demo QR Code]<img src="https://github.com/user-attachments/assets/ba16986b-251f-43ee-85dd-3dbea2b9e194" width="300" height="300" alt="Live Demo QR Code">
 
 
 *Scan the QR code above to access the deployed application instantly.*

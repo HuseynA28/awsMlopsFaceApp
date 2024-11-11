@@ -1,9 +1,7 @@
 
 # 🧠 ML Model Pipeline Deployment
 
-<img src="https://github.com/user-attachments/assets/ba16986b-251f-43ee-85dd-3dbea2b9e194" width="100" height="100" alt="Live Demo QR Code">
-
-*Scan the QR code above to access the deployed application instantly.*
+![Pipeline Overview](https://github.com/user-attachments/assets/ca81f29e-c147-4164-9ec1-7ea62071b62c)
 
 
 
